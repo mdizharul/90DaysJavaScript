@@ -119,3 +119,111 @@ function showNumber(limit) {
     console.log(i,message);
   }
 }
+
+//5. Count Truthy
+
+// Falsy Values -> 0 , null, undefined, '' , falsy, false, NaN
+
+const array = [0,null, undefined, '',2,3];
+
+console.log(countTruthy(array));
+
+function countTruthy(array) {
+  let count =0;
+  for(let value of array)
+  if(value)
+  count++;
+return count
+}
+
+//6. String Properties
+
+const movies = {
+  Title : "Matrix",
+  ReleaseYear: 1998,
+  Director : "Wachoski Brothers",
+  Rating : "A"
+};
+
+function showProperties(obj){
+  for(let key in obj)
+      if (typeof obj[key] ==='string')
+  console.log(key,obj[key]);
+
+}
+showProperties(movies);
+
+
+//7.Sum of multiples within given limit
+//Multiple of 3 : 3, 6, 9
+// Multiples of 5 : 5, 10
+//sum = 33
+
+function sum(limit){
+  let sum =0;
+
+  for(let i=0;i<=limit;i++)
+    if(i%3===0 || i%5===0)
+      sum= sum +i;
+  return sum;
+}
+
+console.log(sum(10));
+
+
+//8. Grade of Students
+//first it calculates avg grade, what grade this avg corrrspond to
+// 0-59 : F
+// 60-69 : D
+// 70-79 : C
+// 80-89 : B
+// 90- 99 : A
+const marks =[80,80,70];
+console.log(calculategrade(marks));
+
+function calculategrade(marks){
+ 
+  const average = calculateAverage(marks);
+  if(average<60) return 'F';
+  if(average<70) return 'D';
+  if(average<80) return 'C';
+  if(average<90) return 'B';
+  return 'A';
+}
+
+function calculateAverage(Array){
+  let summ =0;
+  for(let value of Array)
+  summ = summ + value;
+return summ/Array.length;  
+}
+
+// 9. Star Pattern
+
+showStar(5);
+
+function showStar(rows){
+  for(let i=1;i<=rows;i++){
+    let pattern = '';
+    for(let j=0;j<i;j++)
+    pattern = pattern + '*';
+  console.log(pattern);
+  }
+}
+
+
+//10. Prime number
+
+showPrimes(20);
+console.log(showPrimes(10));
+
+function showPrimes(limit){
+  let n=0;
+  
+  for(let i=2;i<=limit;i++){
+    if(i%n!==0)
+    return i;
+  console.log("Hello");
+
+  }
+}
