@@ -223,7 +223,7 @@ function showPrimes(limit){
   for(let i=2;i<=limit;i++){
     if(i%n!==0)
     return i;
-  console.log("Hello");
+  console.log("Hello wrold");
 
   }
 }
