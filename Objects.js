@@ -4,18 +4,23 @@
 
 // OOP style of programming
 
-const circle={
-  radius : 1,
-  coOrdinates : {
-    x :1, 
-    y :1
-  },
-  isVisible : true,
-  draw : function(){
-    console.log("Drawing circle");
-  }
-};
 
-circle.draw();
+//circle.draw(); //Method
 
 
+// Factory Functions
+// we create a new function called createCircle and we move the code into it.
+function createCircle(){
+  const circle = {
+    radius : 1,
+    coOrdinates : {
+      x :1, 
+      y :1
+    },
+    isVisible : true,
+    draw : function(){
+      console.log("Drawing circle");
+    }
+  };
+  
+}
