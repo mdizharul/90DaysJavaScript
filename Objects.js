@@ -21,10 +21,8 @@
 //     draw : function(){
 //       console.log("Drawing circle");
 //     }
-//   };
-  
+//   }; 
 // }
-
 
 // improving the code & removing fields to understanding and simplicity
 // function createCircle(radius){
@@ -33,13 +31,12 @@
 //     draw : function(){
 //       console.log("Drawing circle");
 //     }
-//   };
-  
+//   };  
 // }
 
 function createCircle(radius){
   return {
-    radius : radius, // if key and values are same  we can skip value
+    radius, // if key and values are same  we can skip value
     draw() {
       console.log("Drawing circle");
     }
