@@ -120,8 +120,9 @@ console.log(anyPositive); // true
 
 //14. Filtering an Array on  search criteria
 // `It return another Array where filtered values are returned`
-// const filtered= n.filter(function (value) {
-//   return value>=0;
+`const filtered= n.filter(function (value) {
+  return value>=0;`;
+
 `We can make this code more efficient by using arrow functions`;
 const filtered = num.filter(n => n >= 0);
 console.log(filtered);
@@ -130,27 +131,27 @@ console.log(filtered);
 
 `Using this we can map an array into something else`;
 
-// we can pass a function ro an arrow function
-// const items=filtered.map(n =>{
-//     const obj = {value:n};
-//     return obj;
-// we mapped each number to an object with a value property. this is useful
-// when building real world applications
-// also we can amke this code more readable by :
-// const items = filtered.map(n => {
-//   return {value:n};
-// earlier we read that if we have a single line of code we can remove return keyword
-// const items = filtered.map((n) => {value: n});
-// we get undefined array values, becoz a curly braces in an arrow function represents a code block
-// so the javascript engine tries to parse this arrow function, it think here we are defining
-// a code block in opposed to an object to return. so if you are returning an object
-// you need to put that object in parentheses
+`we can pass a function or an arrow function
+const items=filtered.map(n =>{
+    const obj = {value:n};
+    return obj;
+we mapped each number to an object with a value property. 
+this is useful when building real world applications
+also we can make this code more readable by :
+const items = filtered.map(n => {
+  return {value:n};
+earlier we read that if we have a single line of code we can remove return keyword
+const items = filtered.map((n) => {value: n});
+we get undefined array values, becoz a curly braces in an arrow function represents a code block
+so the javascript engine tries to parse this arrow function, it think here we are defining
+a code block in opposed to an object to return. so if you are returning an object
+you need to put that object in parentheses`;
 
-// const items = filtered.map(n => ({value: n}) );
+`const items = filtered.map(n => ({value: n}) )`; 
 
 // chaining the Map method
 
-// Instead of sto THE RESULT IN FILTERED CONSTANT WE CAN REMOVE THAT, see line 126, 140 and 143
+// Instead of storing THE RESULT IN FILTERED CONSTANT WE CAN REMOVE THAT, see line 126, 140 and 143
 
 const items=num
   .filter(n => n >= 0)
@@ -162,13 +163,13 @@ console.log(items);
 
 
 //16. Reducing an Array
- // lets think of adding all the elemts of the array , this is similar to toal cost of all the items in a shopping cart
-// const num = [1, 2, -1, 3, 4, 5, 6, 7, 8];
-// `let sum = 0;
-// for(let n of num) {
-//   sum+=n;
-// }
-// console.log(sum);`
+ `lets think of adding all the elemts of the array , this is similar to toal cost of all the items in a shopping cart
+ const num = [1, 2, -1, 3, 4, 5, 6, 7, 8];
+ let sum = 0;
+ for(let n of num) {
+   sum+=n;
+ }
+ console.log(sum);`;
 
 
 // we have a better solution which is reduce () method
@@ -178,17 +179,18 @@ console.log(items);
 },0);
 console.log(sum);`
 
-//const numbers = [1,-1,2,3];
-//a=0 , c= 1 => a=1
-// a=1, c= -1 => a=0
-//a=0, c= 2 => a=2
-// a=2, c= 3 => a=5
+`const numbers = [1,-1,2,3];
+a=0 , c= 1 => a=1
+a=1, c= -1 => a=0
+a=0, c= 2 => a=2
+a=2, c= 3 => a=5
 
-// a=1, c=-1 => a=0
-// a=0, c=2 => a=2
-// a=2, c= 3 => a=5
-// here 0  in line 179 is initialized value or stating value of accumulator set to zeo.
-// but we can also remove that , answer will be same. Also there is a single line of code in return so we can remove that too
+a=1, c=-1 => a=0
+a=0, c=2 => a=2
+a=2, c= 3 => a=5
+here 0  in line 179 is initialized value or stating value of accumulator set to zeo.
+but we can also remove that , answer will be same. Also there is a single line of code in return so we can remove that too`;
+
 const sum=num.reduce(
   (accumulator, currentValue) =>accumulator + currentValue
 );
